@@ -4,8 +4,9 @@ services:
     build: ./auth-api
     ports:
       - '8000:3000'
+    env_file: "webapp.env"
     environment:
-      TOKEN_KEY: 'shouldbeverysecure'
+      TOKEN_KEY: 'shouldbeverysecure' #demo
   users:
     build: ./users-api
     ports:
